@@ -1,0 +1,40 @@
+@import 'dimens';
+
+.Demo {
+
+  > div {
+    position: relative;
+  }
+
+  h1 {
+    position: absolute;
+
+    top: $Dimens-padding;
+    left: $Dimens-padding;
+
+    margin: 0;
+  }
+
+  video {
+    width: 100%;
+    min-height: 100%;
+  }
+}
+
+.Demo-layout-2 {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  flex: 1;
+}
+
+.Demo-HalfWidth {
+  flex: 1 0 0;
+}

@@ -1,0 +1,121 @@
+@import 'colors';
+@import 'dimens';
+
+.ColorSwatches-lighter {
+
+}
+
+.ColorSwatch-blue, .ColorSwatch-red, .ColorSwatch-yellow, .ColorSwatch-green,
+.ColorSwatch-grey {
+  display: flex;
+
+  flex-direction: row;
+}
+
+.ColorSwatch-blue--lightest {
+  background-color: $Color-blueLightest;
+}
+
+.ColorSwatch-blue--light {
+  background-color: $Color-blueLight;
+}
+
+.ColorSwatch-blue--dark {
+  background-color: $Color-blueDark;
+}
+
+.ColorSwatch-blue--main {
+  background-color: $Color-blueMain;
+}
+
+.ColorSwatch-red--lightest {
+  background-color: $Color-redLightest;
+}
+
+.ColorSwatch-red--light {
+  background-color: $Color-redLight;
+}
+
+.ColorSwatch-red--dark {
+  background-color: $Color-redDark;
+}
+
+.ColorSwatch-red--main {
+  background-color: $Color-redMain;
+}
+
+.ColorSwatch-yellow--lightest {
+  background-color: $Color-yellowLightest;
+}
+
+.ColorSwatch-yellow--light {
+  background-color: $Color-yellowLight;
+}
+
+.ColorSwatch-yellow--dark {
+  background-color: $Color-yellowDark;
+}
+
+.ColorSwatch-yellow--main {
+  background-color: $Color-yellowMain;
+}
+
+.ColorSwatch-green--lightest {
+  background-color: $Color-greenLightest;
+}
+
+.ColorSwatch-green--light {
+  background-color: $Color-greenLight;
+}
+
+.ColorSwatch-green--dark {
+  background-color: $Color-greenDark;
+}
+
+.ColorSwatch-green--main {
+  background-color: $Color-greenMain;
+}
+
+.ColorSwatch-blue--lightest, .ColorSwatch-blue--light, .ColorSwatch-blue--dark,
+.ColorSwatch-blue--main, .ColorSwatch-red--lightest, .ColorSwatch-red--light,
+.ColorSwatch-red--dark, .ColorSwatch-red--main, .ColorSwatch-yellow--lightest,
+.ColorSwatch-yellow--light, .ColorSwatch-yellow--dark,
+.ColorSwatch-yellow--main, .ColorSwatch-green--lightest,
+.ColorSwatch-green--light, .ColorSwatch-green--dark,
+.ColorSwatch-green--main {
+  min-width: $Dimens-padding * 4;
+}
+
+.ColorSwatch-blue--main, .ColorSwatch-red--main, .ColorSwatch-yellow--main,
+.ColorSwatch-green--main {
+  padding: $Dimens-padding;
+  color: white;
+
+  flex: 1;
+}
+
+.ColorSwatch-grey {
+  margin-top: $Dimens-padding;
+}
+
+.ColorSwatch-grey--0, .ColorSwatch-grey--1, .ColorSwatch-grey--2,
+.ColorSwatch-grey--3 {
+  height: $Dimens-padding * 2;
+  flex: 1;
+}
+
+.ColorSwatch-grey--0 {
+  background-color: $Color-grey-0;
+}
+
+.ColorSwatch-grey--1 {
+  background-color: $Color-grey-1;
+}
+
+.ColorSwatch-grey--2 {
+  background-color: $Color-grey-2;
+}
+
+.ColorSwatch-grey--3 {
+  background-color: $Color-grey-3;
+}

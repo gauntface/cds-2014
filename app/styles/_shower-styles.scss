@@ -1,0 +1,252 @@
+@import 'dimens';
+@import 'colors';
+
+html, body {
+  display: block;
+
+  height: 100%;
+
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  counter-reset:slide;
+  overflow-y: scroll;
+
+  @media print {
+    text-rendering:geometricPrecision;
+  }
+}
+
+// Currently displayed slide
+.live-region {
+  display:none;
+}
+
+slides {
+  display: block;
+  width: $Dimens-width;
+  height: $Dimens-height;
+}
+
+slide {
+  width:$Dimens-width;
+  height:$Dimens-height;
+
+  position:relative;
+
+  -webkit-print-color-adjust:exact;
+  -webkit-text-size-adjust:none;
+  -moz-text-size-adjust:none;
+  -ms-text-size-adjust:none;
+
+  @media print {
+    page-break-before:always;
+  }
+
+  > div {
+    width:$Dimens-width;
+    height:$Dimens-height;
+
+    position: relative;
+
+    padding:$Dimens-top $Dimens-sides;
+
+    box-sizing: border-box;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+// Slide
+// -------------------------------
+slide {
+	// Inner
+	> div {
+		background-color:#FFF;
+	}
+
+	&.center {
+		> div {
+			display: flex;
+
+			flex-direction: column;
+
+			align-content: center;
+			justify-content: center;
+
+      > * {
+        align-self: center;
+      }
+		}
+	}
+}
+
+// Slide Number
+slide:after {
+	counter-increment:slide;
+	content:counter(slide);
+
+	position:absolute;
+	bottom: 0;
+	right: 0;
+
+	padding:20px;
+
+	text-align:left;
+	font-size:20px;
+}
+
+// Cover Slide
+slide.cover {
+
+	> div * {
+		z-index: 1;
+	}
+
+	img, svg, video,
+	object, canvas, iframe {
+		position:absolute;
+		top:0;
+		left:0;
+		z-index: 0;
+	}
+	&.w {
+		img, svg, video,
+		object, canvas, iframe {
+			top:50%;
+			width:100%;
+			transform:translateY(-50%);
+		}
+	}
+	&.h {
+		img, svg, video,
+		object, canvas, iframe {
+			left:50%;
+			height:100%;
+			transform:translateX(-50%);
+		}
+	}
+	&.w.h {
+		img, svg, video,
+		object, canvas, iframe {
+			top:0;
+			left:0;
+			transform:none;
+		}
+	}
+
+	&:after {
+		display: none;
+	}
+}
+
+// Screen
+@media screen {
+	@mixin offscreen {
+		position:absolute;
+		clip:rect(0 0 0 0);
+		overflow:hidden;
+		margin:-1px;
+		padding:0;
+		width:1px;
+		height:1px;
+		border:none;
+	}
+
+	// Full
+	body.full {
+		position:absolute;
+		top:50%;
+		left:50%;
+		overflow:hidden;
+		margin:(-$Dimens-height/2) 0 0 (-$Dimens-width/2);
+		width:$Dimens-width;
+		height:$Dimens-height;
+		background-color:#000;
+
+		// Live Region
+		.live-region {
+			@include offscreen;
+			display:block;
+		}
+
+		// Slide
+		.slide {
+			position:absolute;
+			top:0;
+			left:0;
+			margin-left:150%;
+			// Next
+			.next {
+				visibility:hidden;
+
+				&.active {
+					visibility:visible;
+				}
+			}
+			// Current
+			&:target {
+				margin:0;
+			}
+
+		}
+
+		// Progress
+		/**.progress {
+			position:absolute;
+			right:0;
+			bottom:0;
+			left:0;
+			overflow:hidden;
+			height:10px;
+			z-index:1;
+
+			div {
+				position:absolute;
+				left:-20px;
+				top:-10px;
+				width:0;
+				height:0;
+				border:10px solid transparent;
+				border-bottom-color:$blue;
+				transition:width 0.2s linear;
+
+				&[style*='100%'] {
+					left:0;
+				}
+			}
+		}**/
+	}
+}
+
+// Notes
+footer {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-$Dimens-height;
+  z-index:1;
+  display:none;
+  padding:20px 120px 4px;
+  background-color:$Color-yellowMain;
+  transition:bottom 0.3s;
+  p {
+    margin:0 0 16px;
+  }
+  mark {
+    background-color:rgba(#FFF, 0.7);
+  }
+}
+&:hover footer {
+  bottom:0;
+}
+
+// Print
+@page {
+	margin:0;
+	size:$Dimens-width $Dimens-height;
+}

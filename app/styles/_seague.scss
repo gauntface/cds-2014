@@ -1,0 +1,36 @@
+@import 'colors';
+
+@mixin seague($color) {
+  color: white;
+
+  > div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-content: center;
+    justify-content: center;
+
+    background-color: $color;
+  }
+
+  h2 {
+    color: inherit;
+  }
+}
+
+.Seague,.Seague--green {
+  @include seague($Color-greenMain);
+}
+
+.Seague--blue {
+  @include seague($Color-blueMain);
+}
+
+.Seague--red {
+  @include seague($Color-redMain);
+}
+
+.Seague--yellow {
+  @include seague($Color-yellowMain);
+}

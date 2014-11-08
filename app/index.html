@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!--<link rel="stylesheet" href="/screen.css">-->
+  <link rel="stylesheet" href="/styles/slides.css">
+</head>
+<body class="list">
+  <header class="Overview-title">
+    <h1>Chrome Dev Summit 2014</h1>
+    <p>Talk Title</p>
+  </header>
+  <slides>
+    <slide class="slide cover Cover h dark Chrome-Dev-Summit-Logo">
+      <div>
+        <img src="images/cds-logo-light.png" alt="">
+      </div>
+    </slide>
+
+    <slide class="slide h Title">
+      <div>
+        <h1>Fundamentals of Mobile Web Dev</h1>
+        <section class="Author">
+          <div class="Author-image">
+            <img src="images/author.jpg" />
+          </div>
+          <div class="Author-details">
+            <div class="Author-name">
+              <a href="https://plus.google.com/+MattGaunt/posts">+Matt Gaunt</a>
+            </div>
+            <div class="Author-twitter">
+              <a href="https://twitter.com/gauntface">@gauntface</a>
+            </div>
+          </div>
+          <img class="Title-chromeLogo" src="images/chrome-logo.png" />
+        </section>
+      </div>
+    </slide>
+
+    <slide class="slide">
+      <div>
+        <h1>So far today...</h1>
+        <p>Performance</p>
+        <p>Service Worker</p>
+        <p>Future Features: Push, Sync etc</p>
+        <p>Security with SSL</p>
+        <p>Polymer</p>
+      </div>
+    </slide>
+
+    <slide class="slide cover Cover w">
+      <div>
+        <img src="images/unicorn-1.png" />
+      </div>
+    </slide>
+
+    <slide class="slide cover Cover w">
+      <div>
+        <img src="images/unicorn-2.png" />
+      </div>
+    </slide>
+
+    <slide class="slide Seague--blue">
+      <div>
+        <h1>Ultimately..</h1>
+        <h2 class="next">...it all builds on top of the Fundamentals</h2>
+      </div>
+    </slide>
+
+    <slide class="slide center">
+      <div>
+        <h1>HTML</h1>
+        <h1>CSS</h1>
+        <h1>JS</h1>
+      </div>
+    </slide>
+
+    <slide class="slide cover Cover w WF-Logo">
+      <div>
+        <img src="images/web-fundamentals-logo-blank.svg" />
+      </div>
+    </slide>
+
+    <slide class="slide cover Cover w">
+      <div>
+        <img src="images/phil-soft-launch-tweet.png" />
+      </div>
+    </slide>
+
+    <slide class="slide cover Cover w WF-Logo">
+      <div>
+        <img src="images/web-fundamentals-logo-blank.svg" />
+      </div>
+    </slide>
+
+    <slide class="slide Seague--blue">
+      <div>
+        <h1>Best Practices</h1>
+        <h1 class="next">Fundamental Practices</h1>
+        <h1 class="next">Use Case</h1>
+      </div>
+    </slide>
+
+    <slide class="slide Seague--red">
+      <div>
+        <h1>One Problem</h1>
+      </div>
+    </slide>
+
+    <slide class="slide cover Cover w WSK-Logo">
+      <div>
+        <img src="images/wsk-logo-blank.svg" />
+      </div>
+    </slide>
+
+  <slide class="slide center">
+    <div>
+      <img src="images/gulp.svg" />
+    </div>
+  </slide>
+
+  <slide class="slide Demo">
+    <div>
+      <h1>Demo Time</h1>
+      <div class="Demo-layout-2">
+        <video id="DemoVideo" class=".Demo-HalfWidth" autoplay></video>
+        <video id="DemoVideo-Screen" class=".Demo-HalfWidth" autoplay></video>
+        <!--<div class="">
+          <ul>
+            <li>gulp</li>
+            <li>Sass - is likely to no longer be a requirement</li>
+            <li>LiveReload</li>
+            <li>BrowserSync</li>
+            <li>(Possibly launch with) Device Lab</li>
+        </div>-->
+      </div>
+    </div>
+  </slide>
+
+  <slide class="slide center WSKStructure">
+    <div>
+      <img src="images/wsk-structure.png" />
+
+      <div class="Callout Callout-blue WSKStructure-jshint next">
+        <h1>.jshintrc + .jscsrc</h1>
+        <h2>Code Quality + Style</h2>
+      </div>
+
+      <div class="Callout Callout-green WSKStructure-gulp">
+        <h1>Gulp</h1>
+      </div>
+
+      <div class="Callout Callout-yellow WSKStructure-styles next">
+        <h1>Styles</h1>
+        <h2>CSS + Sass</h2>
+      </div>
+
+      <div class="Callout Callout-red WSKStructure-styleguide next">
+        <h1>Styleguide</h1>
+        <h2>Sass</h2>
+      </div>
+
+      <div class="Callout Callout-red WSKStructure-images next">
+        <h1>Images</h1>
+      </div>
+
+      <div class="Callout Callout-yellow WSKStructure-scripts next">
+        <h1>Scripts</h1>
+      </div>
+    </div>
+  </slide>
+
+  <slide class="slide Seague--blue">
+    <div>
+      <h1>The Future of WSK</h1>
+    </div>
+  </slide>
+
+  <slide class="slide iframeDemo">
+    <div>
+      <iframe src="./wsk/dist/material-styleguide.html"></iframe>
+    </div>
+  </slide>
+
+  <slide class="slide iframeDemo" id="wsk-navigation-demo">
+    <div>
+      <div class="iframeDemo-btnbar">
+        <button class="PaperButton PaperFab PaperFab--colored RippleEffect small-btn">S</button>
+        <button class="PaperButton PaperFab PaperFab--colored RippleEffect medium-btn">M</button>
+        <button class="PaperButton PaperFab PaperFab--colored RippleEffect large-btn">L</button>
+      </div>
+      <iframe src="./wsk/dist/styleguide/navigation/demo.html"></iframe>
+    </div>
+  </slide>
+
+<slide class="slide Seague--yellow">
+  <div>
+    <h1>Guidance</h1>
+    <h1>Workflow Tooling</h1>
+    <h1 class="next">DevTools</h1>
+  </div>
+</slide>
+
+<slide class="slide DeviceMode">
+  <div>
+    <h1>Device Mode</h1>
+    <div class="DeviceMode-img"><img src="./images/devtools-device-mode.png" /></div>
+  </div>
+</slide>
+
+<slide class="slide DevicesList">
+  <div>
+    <h1>Device Mode</h1>
+    <div class="DeviceMode-img"><img src="./images/devtools-device-mode-devices.png" /></div>
+    <div class="Callout Callout-yellow Callout-Devices">
+      <h1>Select Device</h1>
+    </div>
+  </div>
+</slide>
+
+<slide class="slide NetworkingList">
+  <div>
+    <h1>Device Mode</h1>
+    <div class="DeviceMode-img"><img src="./images/devtools-device-mode-networking.png" /></div>
+    <div class="Callout Callout-yellow Callout-Networking">
+      <h1>Throttle Network Speed</h1>
+    </div>
+  </div>
+</slide>
+
+<!--<slide class="slide PaintPreview">
+  <div>
+    <h1>Paint Preview</h1>
+    <div class="PaintPreview-img"><img src="./images/devtools-paint-preview.png" /></div>
+  </div>
+</slide>-->
+
+<slide class="slide">
+  <div>
+    <h1>Paint Profiler</h1>
+    <video src="./videos/devtools-paint-profiler.mp4"></video>
+  </div>
+</slide>
+
+<slide class="slide">
+  <div>
+    <h1>Flame Chart View</h1>
+  </div>
+</slide>
+
+<slide class="slide">
+  <div>
+    <h1>Layer Tree</h1>
+  </div>
+</slide>
+
+<slide class="slide">
+  <div>
+    <h1>Integrated JS Profiler</h1>
+  </div>
+</slide>
+
+<slide class="slide">
+  <div>
+    <h1>Invalidation tracking</h1>
+  </div>
+</slide>
+
+
+
+
+
+
+
+    <!-- Below are template Slides -->
+
+
+    <slide class="slide Seague--green">
+      <div>
+        <h1>Basic Elements</h1>
+      </div>
+    </slide>
+
+    <slide class="slide">
+      <div>
+        <h1>Heading</h1>
+        <h2>Subheading</h2>
+        <p>Body</p>
+        <p><code>Code</code></p>
+        <figcaption>Caption</figcaption>
+        <div class="Source">Source</div>
+      </div>
+    </slide>
+
+    <slide class="slide">
+      <div>
+        <h1>Color Palette</h1>
+        <section class="ColorSwatch-blue">
+          <div class="ColorSwatch-blue--lightest"></div>
+          <div class="ColorSwatch-blue--light"></div>
+
+          <div class="ColorSwatch-blue--main">$Color-blueMain</div>
+
+          <div class="ColorSwatch-blue--dark"></div>
+        </section>
+
+        <section class="ColorSwatch-red">
+          <div class="ColorSwatch-red--lightest"></div>
+          <div class="ColorSwatch-red--light"></div>
+
+          <div class="ColorSwatch-red--main">$Color-redMain</div>
+
+          <div class="ColorSwatch-red--dark"></div>
+        </section>
+
+        <section class="ColorSwatch-yellow">
+          <div class="ColorSwatch-yellow--lightest"></div>
+          <div class="ColorSwatch-yellow--light"></div>
+
+          <div class="ColorSwatch-yellow--main">$Color-yellowMain</div>
+
+          <div class="ColorSwatch-yellow--dark"></div>
+        </section>
+
+        <section class="ColorSwatch-green">
+          <div class="ColorSwatch-green--lightest"></div>
+          <div class="ColorSwatch-green--light"></div>
+
+          <div class="ColorSwatch-green--main">$Color-greenMain</div>
+
+          <div class="ColorSwatch-green--dark"></div>
+        </section>
+
+        <section class="ColorSwatch-grey">
+          <div class="ColorSwatch-grey--0"></div>
+          <div class="ColorSwatch-grey--1"></div>
+          <div class="ColorSwatch-grey--2"></div>
+          <div class="ColorSwatch-grey--3"></div>
+        </section>
+      </div>
+    </slide>
+
+    <slide class="slide">
+      <div>
+        <div class="Callout-roundRect">
+          A
+        </div>
+
+        <div class="Callout Callout-blue">
+          <h1>Callout</h1>
+          <h2>Subcaption</h2>
+        </div>
+
+        <div class="Callout Callout-red">
+          <h1>Callout</h1>
+          <h2>Subcaption</h2>
+        </div>
+
+        <div class="Callout-arrow">
+          <div class="Callout-arrowDotBlue"></div>
+          <div class="Callout-arrowDotRed"></div>
+          <div class="Callout-arrowDotYellow"></div>
+          <div class="Callout-arrowDotGreen"></div>
+        </div>
+      </div>
+    </slide>
+
+    <slide class="slide Seague--blue">
+      <div>
+        <h1>Example Slides</h1>
+      </div>
+    </slide>
+
+    <slide class="slide cover w h">
+      <div>
+        <div class="Callout Callout-white" id="DemoCoverCallout">
+          <h1>Example Slides</h1>
+          <h2>Hello</h2>
+        </div>
+
+        <img src="images/image09.png" />
+      </div>
+    </slide>
+
+    <slide class="slide center">
+      <div>
+        <blockquote>
+          Good design is as little design as possible
+        </blockquote>
+        <cite>Dieter Rams</cite>
+      </div>
+    </slide>
+
+    <slide class="slide Seague--red">
+      <div>
+        <h1>Code</h1>
+      </div>
+    </slide>
+
+    <slide class="slide">
+      <div>
+        <h3>HTML</h3>
+        <pre>
+<span class="blue">&lt;paper-button</span> <span class="red">id</span>=<span class="green">"go"</span> <span class="red">disabled</span><span class="blue">&gt;</span><span class="accent">Go!</span><span class="blue">&lt;/paper-button&gt;</span></pre>
+
+        <h3>CSS</h3>
+        <pre>
+.<span class="accent">paper-button</span> {
+  <span class="accent">background-color</span>: <span class="accent">red</span>;
+}</span></pre>
+
+        <h3>Javascript</h3>
+        <pre>
+<span class="accent">document.querySelector</span>(<span class="green">'.paper-button'</span>)
+    <span class="accent">.addEventListener</span>(<span class="green">'click'</span>, <span class="blue">function</span>(<span class="accent">e</span>) {
+        // your code here
+    }, <span class="blue">false</span>);</pre>
+      </div>
+    </slide>
+
+    <slide class="slide FullscreenCode">
+      <div>
+        <h1>MainActivity.java</h1>
+        <pre><span class="blue">protected void</span> <span class="accent">onTryUpdate</span>(<span class="blue">int</span> <span class="accent">reason</span>) <span class="blue">throws</span> <span class="red">RetryException</span> {
+    // Do some awesome stuff
+    <span class="blue">int</span> <span class="accent">foo</span> = <span class="yellow">15</span>;
+    <span class="accent">publishArtwork</span>(<span class="blue">new</span> <span class="red">Artwork.Builder</span>()
+            .<span class="accent">title</span>(<span class="accent">photo.name</span>)
+            .<span class="accent">imageUri</span>(<span class="red">Uri</span>.<span class="accent">parse</span>(<span class="accent">photo.image_url</span>))
+            .<span class="accent">viewIntent</span>(<span class="blue">new</span> <span class="red">Intent</span>(<span class="red">Intent</span>.<span class="accent">ACTION_VIEW</span>,
+                    <span class="red">Uri</span>.<span class="accent">parse</span>(<span class="green">"http://500px.com/photo/"</span> + <span class="accent">photo.id</span>)))
+            .<span class="accent">build</span>());
+    <span class="accent">scheduleUpdate</span>(<span class="red">System</span>.<span class="accent">currentTimeMillis</span>() + <span class="accent">ROTATE_TIME_MILLIS</span>);
+}</pre>
+      <style>
+        pre {
+          font-size: 21px;
+        }
+      </style>
+      </div>
+    </slide>
+
+    <slide class="slide FullscreenCode Highlight">
+      <div>
+        <h1>MainActivity.java</h1>
+        <pre><span class="blue">protected void</span> <span class="accent">onTryUpdate</span>(<span class="blue">int</span> <span class="accent">reason</span>) <span class="blue">throws</span> <span class="red">RetryException</span> {
+    // Do some awesome stuff
+    <span class="blue">int</span> <span class="accent">foo</span> = <span class="yellow">15</span>;
+    <span class="accent">publishArtwork</span>(<span class="blue">new</span> <span class="red">Artwork.Builder</span>()
+            .<span class="accent">title</span>(<span class="accent">photo.name</span>)
+            .<span class="accent">imageUri</span>(<span class="red">Uri</span>.<span class="accent">parse</span>(<span class="accent">photo.image_url</span>))
+            .<span class="accent">viewIntent</span>(<span class="blue">new</span> <span class="red">Intent</span>(<span class="red">Intent</span>.<span class="accent">ACTION_VIEW</span>,
+                    <span class="red">Uri</span>.<span class="accent">parse</span>(<span class="green">"http://500px.com/photo/"</span> + <span class="accent">photo.id</span>)))
+            .<span class="accent">build</span>());
+    <span class="accent">scheduleUpdate</span>(<span class="red">System</span>.<span class="accent">currentTimeMillis</span>() + <span class="accent">ROTATE_TIME_MILLIS</span>);
+}</pre>
+      <div class="bg-highlight"></div>
+      <style>
+        .FullscreenCode pre {
+          position: absolute;
+          font-size: 21px;
+          z-index: 2;
+        }
+
+        .bg-highlight {
+          width: 650px;
+          height: 70px;
+
+          position: absolute;
+          top: 267px;
+          left: 250px;
+
+          z-index: 0;
+        }
+      </style>
+      </div>
+    </slide>
+
+    <slide class="slide Seague--yellow">
+      <div>
+        <h1>Nearly Done</h1>
+      </div>
+    </slide>
+
+    <slide class="slide Fin">
+      <div>
+        <h1>Thank you!</h1>
+
+        <div class="Fin-row">
+          <section class="Fin-left">
+            <p>(feedback slide TBD)</p>
+            <p class="Fin-hashtag">#optionalhashtag</p>
+          </section>
+
+          <section class="Fin-right">
+            <section class="Author">
+              <div class="Author-image">
+                <img src="images/author.jpg" />
+              </div>
+              <div class="Author-details">
+                <div class="Author-name">
+                  <a href="https://plus.google.com/+MattGaunt/posts">+Matt Gaunt</a>
+                </div>
+                <div class="Author-twitter">
+                  <a href="https://twitter.com/gauntface">@gauntface</a>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </slide>
+
+    <slide class="slide cover Cover h dark">
+      <div>
+        <img src="images/cds-logo-light.png" alt="">
+      </div>
+    </slide>
+
+
+
+    <slide class="slide Title">
+      <div>
+        <h1>The Fundamentals of Mobile Web Development</h1>
+        <section class="Author">
+          <div class="Author-image">
+            <img src="images/author.jpg" />
+          </div>
+          <div class="Author-details">
+            <div class="Author-name">
+              <a href="https://plus.google.com/+MattGaunt/posts">+Matt Gaunt</a>
+            </div>
+            <div class="Author-twitter">
+              <a href="https://twitter.com/gauntface">@gauntface</a>
+            </div>
+          </div>
+          <img class="Title-chromeLogo" src="images/chrome-logo.png" />
+        </section>
+      </div>
+    </slide>
+
+    <!--<slide class="slide">
+      <div>
+        <h2>Shower Key Features</h2>
+        <ol>
+          <li>Built on HTML, CSS and vanilla JavaScript</li>
+          <li>All modern browsers are supported</li>
+          <li>Slide themes are separated from engine</li>
+          <li>Fully keyboard accessible</li>
+          <li>Printable to PDF</li>
+        </ol>
+        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+      </div>
+    </slide>
+
+  <slide class="slide">
+    <div>
+      <h2>Plain Text on Your Slides</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </slide>
+
+  <slide class="slide">
+    <div>
+      <h2>All Kind of Lists</h2>
+      <ol>
+        <li>Simple lists are marked with bullets</li>
+        <li>Ordered lists begin with a number</li>
+        <li>You can even nest lists one inside another
+          <ul>
+            <li>Or mix their types</li>
+            <li>But do not go too far</li>
+            <li>Otherwise audience will be bored</li>
+          </ul>
+        </li>
+        <li>Look, seven rows exactly!</li>
+      </ol>
+    </div>
+  </slide>
+
+  <slide class="slide">
+    <div>
+      <h2>Serious Citations</h2>
+      <figure>
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+        </blockquote>
+        <figcaption>Marcus Tullius Cicero</figcaption>
+      </figure>
+    </div>
+  </slide>
+
+  <slide class="slide">
+    <div>
+      <h2>Code Samples</h2>
+      <pre>
+        <code>&lt;!DOCTYPE html&gt;</code>
+        <code>&lt;html lang="en"&gt;</code>
+        <code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+        <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+        <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+        <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+        <code><mark>&lt;/head&gt;</mark></code>
+      </pre>
+    </div>
+  </slide>
+
+  <slide class="slide">
+    <div>
+      <h2>Inner Navigation</h2>
+      <ol>
+        <li>Lets you reveal list items one by one</li>
+        <li class="next">To keep some key points</li>
+        <li class="next">In secret from audience</li>
+        <li class="next">But it will work only once</li>
+        <li class="next">Nobody wants to see the same joke twice</li>
+      </ol>
+    </div>
+  </slide>-->
+
+  </slides>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <!--<div class="progress"><div></div></div>-->
+
+  <!--<script src="shower.min.js"></script>-->
+  <script src="shower.js"></script>
+  <script src="scripts/inline-camera-demo.js"></script>
+  <script src="scripts/wsk-navigation-demo.js"></script>
+  <!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

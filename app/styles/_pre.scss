@@ -1,0 +1,37 @@
+@import 'colors';
+@import 'dimens';
+
+pre {
+  padding: $Dimens-padding;
+
+  background-color: $Color-grey-lightBg;
+  color: $Color-grey-1;
+
+  .accent {
+    color: $Color-grey-3;
+  }
+
+  .green {
+    color: $Color-greenMain;
+  }
+
+  .red {
+    color: $Color-redMain;
+  }
+
+  .blue {
+    color: $Color-blueMain;
+  }
+
+  .yellow {
+    color: $Color-yellowMain;
+  }
+}
+
+.FullscreenCode pre {
+  background-color: transparent;
+
+  .accent {
+    color: white;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Matt's Presenter Thingy-Majig",
+  "description": "A private app for use during presenting",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["chrome-app/js/background.js"]
+    }
+  },
+  "icons": {
+    "16": "chrome-app/images/app-icons/icon-16.png",
+    "22": "chrome-app/images/app-icons/icon-22.png",
+    "32": "chrome-app/images/app-icons/icon-32.png",
+    "48": "chrome-app/images/app-icons/icon-48.png",
+    "128": "chrome-app/images/app-icons/icon-128.png"
+  },
+  "permissions": [
+    "audioCapture",
+    "videoCapture",
+    "webview",
+    "desktopCapture"
+  ]
+}

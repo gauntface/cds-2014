@@ -1,0 +1,232 @@
+@import "colors";
+@import "dimens";
+
+.Callout-roundRect {
+  display: inline-block;
+
+  padding: $Dimens-padding * 2;
+
+  background-color: $Color-grey-0;
+  border-radius: 6px;
+
+}
+
+@mixin calloutLine($length, $angle, $side) {
+  $borderWidth: 3px;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+
+    @if $side == "bottom" {
+      width: 0;
+      height: $length;
+
+      top: auto;
+      bottom: -$length;
+      right: auto;
+      left: 50%;
+      transform-origin: 50% 0;
+    } @elseif $side == "top" {
+      width: 0;
+      height: $length;
+
+      top: -$length;
+      bottom: auto;
+      right: auto;
+      left: 50%;
+      transform-origin: 50% $length;
+    } @elseif $side == "left" {
+      width: $length;
+      height: 0;
+
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      left: -$length;
+      transform-origin: $length 50%;
+    } @elseif $side == "right" {
+      width: $length;
+      height: 0;
+
+      top: 50%;
+      bottom: auto;
+      right: -$length;
+      left: auto;
+      transform-origin: 0 50%;
+    }
+
+    border-style: solid;
+    border-width: $borderWidth;
+
+transform: rotate($angle);
+  }
+
+  &:after {
+    content: '';
+
+    width: 16px;
+    height: 16px;
+
+
+
+    position: absolute;
+    //@if $side === 'bottom'
+    //  bottom: -$height;
+    //  left: 50%;
+    @if $side == "bottom" {
+      $marginBottom: (16px / 2);
+      margin-left: -((16px - ($borderWidth * 2)) / 2);
+      margin-bottom: -$marginBottom;
+
+      top: auto;
+      bottom: -$length;
+      right: auto;
+      left: 50%;
+      transform-origin: 50% (-($length - $marginBottom) - $borderWidth);
+    } @elseif $side == "top" {
+      $marginTop: (16px / 2);
+      margin-left: -((16px - ($borderWidth * 2)) / 2);
+      margin-top: -$marginTop;
+
+      top: -$length;
+      bottom: auto;
+      right: auto;
+      left: 50%;
+      transform-origin: 50% ($length + $marginTop);
+    } @elseif $side == "left" {
+      $marginLeft: (16px / 2);
+      margin-left: -$marginLeft;
+      margin-top: -((16px - ($borderWidth * 2)) / 2);
+
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      left: -$length;
+      transform-origin: ($length+$marginLeft) 50%;
+    } @elseif $side == "right" {
+      $marginRight: (16px / 2);
+      margin-right: -$marginRight;
+      margin-top: -((16px - ($borderWidth * 2)) / 2);
+
+      top: 50%;
+      bottom: auto;
+      right: -$length;
+      left: auto;
+      transform-origin: (-($length - $marginRight) - ($borderWidth * 2)) 50%;
+    }
+
+    border-radius: 100%;
+
+    transform: rotate($angle);
+  }
+}
+
+.Callout {
+  display: inline-block;
+
+  position: relative;
+
+  padding: 2 * $Dimens-padding;
+
+  color: white;
+
+  border-radius: 6px;
+
+  h1 {
+    margin: 0;
+
+    font-size: 22px;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-size: 18px;
+    color: inherit;
+  }
+}
+
+.Callout-blue {
+  background-color: $Color-blueMain;
+
+  &:before {
+    border-color: $Color-blueMain;
+  }
+
+  &:after {
+    background-color: $Color-blueMain;
+  }
+
+  @include calloutLine(40px, 70deg, bottom);
+}
+
+.Callout-red {
+  background-color: $Color-redMain;
+
+  &:before {
+    border-color: $Color-redMain;
+  }
+
+  &:after {
+    background-color: $Color-redMain;
+  }
+
+  @include calloutLine(40px, 35deg, right);
+}
+
+.Callout-white {
+  background-color: white;
+  color: inherit;
+
+  &:before {
+    border-color: white;
+  }
+
+  &:after {
+    background-color: white;
+  }
+
+  @include calloutLine(40px, 35deg, right);
+}
+
+.Callout-yellow {
+  background-color: $Color-yellowMain;
+
+  &:before {
+    border-color: $Color-yellowMain;
+  }
+
+  &:after {
+    background-color: $Color-yellowMain;
+  }
+
+  @include calloutLine(40px, 70deg, left);
+}
+
+.Callout-green {
+  background-color: $Color-greenMain;
+
+  &:before {
+    border-color: $Color-greenMain;
+  }
+
+  &:after {
+    background-color: $Color-greenMain;
+  }
+
+  @include calloutLine(40px, 70deg, right);
+}
+
+.Callout-arrow {
+
+}
+
+.Callout-arrowDotBlue {}
+
+.Callout-arrowDotRed {}
+
+.Callout-arrowDotYellow {}
+
+.Callout-arrowDotGreen {}

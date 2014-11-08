@@ -1,0 +1,68 @@
+@import "dimens";
+@import "colors";
+
+@mixin typo-button($colorContrast: false, $usePreferred: true) {
+  
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.04em;
+
+  @if $colorContrast {
+    opacity: 0.87;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+}
+
+h1 {
+  margin-top: $Dimens-padding * 2;
+  margin-bottom: $Dimens-padding;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: $Dimens-padding;
+  color: $Color-grey-1;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: $Dimens-padding;
+  color: $Color-grey-3;
+}
+
+p {
+  margin: $Dimens-padding 0;
+}
+
+a {
+  color: $Color-blueMain;
+  text-decoration:none;
+}
+
+code, pre {
+  font-family: 'Inconsolata', monospace;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+figcaption {
+  font-size: 18px;
+  margin: ($Dimens-padding / 2) 0;
+}
+
+.Source {
+  font-size: 16px;
+  color: $Color-grey-0;
+  margin: ($Dimens-padding / 2) 0;
+}
+
+cite {
+  font-family: 'Roboto Condensed', sans-serif;
+}

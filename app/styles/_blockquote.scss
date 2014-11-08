@@ -1,0 +1,48 @@
+@import 'dimens';
+@import 'colors';
+
+blockquote {
+  display: block;
+
+  position: relative;
+
+  font-size: 74px;
+  font-style: italic;
+  font-weight: normal;
+
+  margin: 0 0 ($Dimens-padding * 3) 0;
+
+  &:before, &:after {
+    position: absolute;
+
+    margin-top: -24px;
+
+    color: $Color-grey-0;
+    font-size: 124px;
+  }
+
+  &:before {
+    content: '“';
+
+    margin-left: -52px;
+  }
+
+  &:after {
+    content: '”';
+
+    color: $Color-grey-0;
+
+    margin-left: 12px;
+  }
+}
+
+cite {
+  display: block;
+
+  margin: 0;
+
+  color: $Color-greenMain;
+  font-size: 34px;
+  font-weight: bold;
+  font-style: normal;
+}
